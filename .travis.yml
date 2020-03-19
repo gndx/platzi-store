@@ -9,8 +9,17 @@ node_js:
 
 git:
   depth: 3
-script:
+
+script: 
   - yarn build
+
+notifications:
+  email:
+    recipients:
+      - adoa2705@gmail.com
+    on_succes: always
+    on_failure: always
+
 
 deploy:
   provider: pages
