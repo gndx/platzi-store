@@ -12,6 +12,15 @@ git:
 script:
   - yarn build
 
+notifications:
+  email:
+    recipients:
+      - danielpat6@gmail.com
+      - daniel_pat_98@hotmail.com
+    on_success: always
+    on_failure: always
+    
+
 deploy:
   provider: pages
   skip-clean: true
