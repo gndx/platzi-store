@@ -14,6 +14,14 @@ git:
 script:
   - yarn build
 
+notifications:
+  email:
+    recipients:
+      - u201320891@upc.edu.pe
+      - u201514642@upc.edu.pe
+    on_success: always
+    on_failure: always
+
 deploy:
   provider: pages
   skip_cleanup: true
