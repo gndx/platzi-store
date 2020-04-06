@@ -1,0 +1,34 @@
+# Lenguaje con se va a programar
+language: node_js
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+
+node_js:
+  - '12'
+
+git:
+  depth: 3
+
+script:
+  - yarn build
+notifications:
+  email:
+    recipients:
+      - igorariza@gmail.com
+      - igor.ariza@correounivalle.edu.co
+      on_success: always
+      on_failure: always
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  keep-history: true
+  github-token: $GITHUB_TOKEN
+  local-dir: dist/
+  target-branch: gh-pages
+  commit_message: "Deploy al proyecto"
+  on:
+    branch: master
+
