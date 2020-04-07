@@ -13,6 +13,15 @@ git:
 script:
   - yarn build
 
+notifications:
+  email:
+    recipients:
+      - me.fernandezserrano@gmail.com
+      - fese.system@gmail.com
+    on_success: always
+    on_failure: always
+
+
 deploy:
   provider: pages
   skip-cleanup: true
