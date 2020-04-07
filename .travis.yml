@@ -20,9 +20,6 @@ deploy:
   github-token: $GITHUB_TOKEN
   local-dir: dist/
   target-branch: gh-pages
-  commit_message: "Deploy del proyecto"
+  commit_message: 'Deploy del proyecto'
   on:
     branch: master
-
-
-
