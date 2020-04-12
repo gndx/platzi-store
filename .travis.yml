@@ -1,0 +1,39 @@
+language: node_js
+
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+
+node_js:
+  - '12'
+
+git:
+  depth: 3
+
+branches:
+  only:
+  - master
+
+script:
+  - yarn build
+
+notifications:
+  webhooks: https://outlook.office.com/webhook/da09df2f-c8bb-4788-9f91-778ac1cc211d@0e0cb060-09ad-49f5-a005-68b9b49aa1f6/TravisCI/c0f5ee55a6bf4aa5a7529c553bfca435/03f7a84b-b750-4321-a87e-058780786ea6
+  email:
+    recipients:
+      - u201320891@upc.edu.pe
+      - u201514642@upc.edu.pe
+    on_success: always
+    on_failure: always
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  keep_history: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/
+  target-branch: gh-pages
+  commit_message: "Deploy del proyecto"
+  on:
+    branch: master
