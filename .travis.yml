@@ -9,6 +9,13 @@ git:
   depth: 3
 script:
   - yarn build
+notifications:
+  email:
+    reciepients:
+      - luismoran0293@gmail.com
+      - luis-moranchozo93@hotmail.om
+    on_success: alwais
+    on_failure: alwais
 deploy:
   provider: pages
   skip_cleanup: true
