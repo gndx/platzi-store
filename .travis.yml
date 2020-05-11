@@ -1,4 +1,4 @@
-lenguage: node_js
+language: node_js
 cache:
   directories:
     - node_modules
@@ -11,7 +11,7 @@ script:
   - yarn build
 deploy:
   provider: pages
-  skip_cleanup: true
+  cleanup: true
   keep_history: true
   github_token: $GITHUB_TOKEN
   local_dir: dist/
