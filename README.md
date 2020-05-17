@@ -1,4 +1,4 @@
 # platzi-store
 Curso de Pruebas unitarias con Jest
 
-Rama: Develop change 2
+Rama: Develop finally
