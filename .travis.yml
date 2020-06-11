@@ -9,6 +9,13 @@ git:
   depth: 3
 script:
   - yarn build
+notificarions:
+  email:
+    recipients:
+      - alejozepol@gmail.com
+      - galopez683@misena.edu.co
+    on_success: always
+    on_failure: always
 deploy:
   provider: pages
   skip-cleanup: true
