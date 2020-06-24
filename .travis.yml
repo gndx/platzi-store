@@ -16,6 +16,7 @@ notifications:
             - devalexandrecr@gmail.com
         on_success: always
         on_failure: always
+    slack: devstrong:FZs99olapPNTZcjLdQGV9VWy
 deploy:
     provider: pages
     skip-cleanup: true
