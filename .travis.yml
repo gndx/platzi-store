@@ -1,0 +1,27 @@
+language: node_js
+cache:
+  directories:
+    - node_modules #mantener en cache estos modulos
+    - ~/.npm
+
+node_js:
+  - '12'
+
+os: windows
+
+git:
+  depth: 3
+
+script:
+  - yarn build
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  keep-history: true
+  github-token: $GITHUB_TOKEN
+  local-dir: dist/
+  target_branch: gh-pages
+  commit_message: "Deploy of the project"
+  on:
+    branch: master
