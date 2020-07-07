@@ -13,6 +13,14 @@ git:
 script:
   - yarn build
 
+notifications:
+  email:
+    recipients:
+      milton37aa@gmail.com
+      milton.fi@hotmail.com
+    on_success: always
+    on_failure: always
+
 deploy:
   provider: pages
   skip-cleanup: true
