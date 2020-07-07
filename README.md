@@ -2,3 +2,4 @@
 Curso de Pruebas unitarias con Jest
 
 Rama: develop
+Bandera correo correcta
