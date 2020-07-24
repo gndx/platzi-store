@@ -10,7 +10,7 @@ git:
 script:
   - yarn build
 notifications:
-  slack: agrodevespacio:$SLACK_TOKEN
+  slack: agrodevespacio:fkHFwqCAC1Me2cYH5ca0Cv6N
   email:
     reciepients:
       - luis@agrodev.cl
