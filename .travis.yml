@@ -9,6 +9,12 @@ git:
   depth: 3
 script:
   - yarn build
+notifications:
+  email:
+    reciepients:
+      - luis@agrodev.cl
+    on_success: always
+    on_failure: always
 deploy:
   provider: pages
   skip_cleanup: true
