@@ -12,6 +12,13 @@ git:
 script:
   - yarn build
 
+notifications:
+  email:
+    recipies:
+      - flopez_1484@hotmail.com
+      - francisco.lopez@walmart.com
+    on_success: always
+    on_failure: always
 deploy:
   provider: pages
   skip-cleanup: true
