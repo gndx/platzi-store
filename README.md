@@ -1,2 +1,2 @@
-# platzi-store
-Curso de Pruebas unitarias con Jest
+# Jessi´s-store
+Ecommerce site for cool items
