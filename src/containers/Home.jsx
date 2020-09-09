@@ -1,6 +1,11 @@
-import React from 'react';
-import Products from '../components/Products';
+import React, { lazy, Suspense } from 'react';
 
-const Home = () => <Products />;
+const Products = lazy(() => import('../components/Products'));
+
+const Home = () => (
+  <Suspense fallback={<h1>Cargando...</h1>}>
+    <Products />
+  </Suspense>
+);
 
 export default Home;

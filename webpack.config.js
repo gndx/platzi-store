@@ -42,6 +42,11 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
+    watchContentBase: true,
+    contentBase: './src',
+    watchOptions: {
+      poll: 666,
+    },
   },
   plugins: [
     new HtmlWebPackPlugin({
