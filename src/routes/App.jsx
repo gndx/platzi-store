@@ -4,8 +4,7 @@ import Home from '../containers/Home';
 import Checkout from '../containers/Checkout';
 import Layout from '../components/Layout';
 import NotFound from '../containers/NotFound';
-import { CartProvider } from '../CartContext'
-
+import { CartProvider } from '../context/CartContext'
 
 const App = () => (
   <CartProvider>

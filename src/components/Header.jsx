@@ -1,13 +1,10 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/components/Header.styl';
-
-//Nuevo
-import { CartContext } from '../CartContext'
+import { CartContext } from '../context/CartContext'
 
 const Header = props => {
   const [cart, setCart] = useContext(CartContext)
-
 
   return (
     < div className="Header" >
