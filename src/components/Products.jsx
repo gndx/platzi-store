@@ -3,22 +3,18 @@ import { connect } from 'react-redux';
 import actions from '../actions';
 import '../styles/components/Products.styl';
 import Product from './Product';
+import products from '../initialState'
 
-const Products = (props) => {
-  const { products } = props;
-
-  const handleAddToCart = product => () => {
-    props.addToCart(product);
-  };
+const Products = () => {
+  console.log(products.products)
 
   return (
     <div className="Products">
       <div className="Products-items">
-        {products.map(product => (
+        {products.products.map(product => (
           <Product
             key={product.id}
             product={product}
-            handleAddToCart={handleAddToCart}
           />
         ))}
       </div>
@@ -26,14 +22,4 @@ const Products = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    products: state.products,
-  };
-};
-
-const mapDispatchToProps = {
-  addToCart: actions.addToCart,
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Products);
+export default Products
