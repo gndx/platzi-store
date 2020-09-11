@@ -7,14 +7,14 @@ import Product from './Product';
 const Products = (props) => {
   const { products } = props;
 
-  const handleAddToCart = product => () => {
+  const handleAddToCart = (product) => () => {
     props.addToCart(product);
   };
 
   return (
     <div className="Products">
       <div className="Products-items">
-        {products.map(product => (
+        {products.map((product) => (
           <Product
             key={product.id}
             product={product}
@@ -28,12 +28,12 @@ const Products = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    products: state.products,
+    products: state.products
   };
 };
 
 const mapDispatchToProps = {
-  addToCart: actions.addToCart,
+  addToCart: actions.addToCart
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Products);
