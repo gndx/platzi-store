@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
+import { ShopContext } from '../context/GlobalState';
 import '../styles/components/Header.styl';
 
-const Header = (props) => {
-  const { cart } = props;
+const Header = () => {
+  const { cart } = useContext(ShopContext);
+
   return (
     <div className="Header">
       <h1 className="Header-title">
@@ -20,10 +21,4 @@ const Header = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    cart: state.cart
-  };
-};
-
-export default connect(mapStateToProps, null)(Header);
+export default Header;
