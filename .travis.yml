@@ -19,3 +19,9 @@ deploy:
   commit_message: 'Deploy'
   on:
     branch: master
+notifications:
+  email:
+    recipients:
+      - angelozam17@gmail.com
+    on_success: always
+    on_failure: always
