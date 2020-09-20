@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Product = ({ product, handleAddToCart }) => (
   <div className="Products-item">
@@ -14,6 +14,6 @@ const Product = ({ product, handleAddToCart }) => (
       Comprar
     </button>
   </div>
-);
+)
 
-export default Product;
+export default Product

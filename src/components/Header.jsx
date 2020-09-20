@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
-import { ShopContext } from '../context/GlobalState';
-import '../styles/components/Header.styl';
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import { ShopContext } from '../context/GlobalState'
+import '../styles/components/Header.styl'
 
 const Header = () => {
-  const { cart } = useContext(ShopContext);
+  const { cart } = useContext(ShopContext)
 
   return (
     <div className="Header">
@@ -18,7 +18,7 @@ const Header = () => {
         {cart.length > 0 && <div className="Header-alert">{cart.length}</div>}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
