@@ -16,7 +16,7 @@ notifications:
   email: 
     recipients:
       - johan-avila@outlook.com
-      - ivanoseayo@gmail.com 
+#      - ivanoseayo@gmail.com 
     on_success: always  #Cuando sea succes habra noticifacion
     on_fail: always     #CUndo esto falla 
 
@@ -30,4 +30,3 @@ deploy:
   commit_message: "Deploy con Travis"
   on: 
     branch: master
-    
