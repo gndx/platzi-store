@@ -1,4 +1,4 @@
-lenguage: node_js
+language: node_js
 
 cache: 
   directories:
@@ -7,10 +7,18 @@ cache:
 node_js:
   - '12'
 git:
-  depht: 3
+  depth: 3
 
 script:
   - yarn build
+#ESTA CONFIG ES PARA NOTIFICARME POR CORREO
+notifications: 
+  email: 
+    recipients:
+      - johan-avila@outlook.com
+      - ivanoseayo@gmail.com 
+    on_success: always  #Cuando sea succes habra noticifacion
+    on_fail: always     #CUndo esto falla 
 
 deploy: 
   provider: pages
@@ -22,3 +30,4 @@ deploy:
   commit_message: "Deploy con Travis"
   on: 
     branch: master
+    
