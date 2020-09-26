@@ -12,13 +12,29 @@ git:
 script:
   - yarn build
 #ESTA CONFIG ES PARA NOTIFICARME POR CORREO
-notifications: 
+notifications:
+  slack: $SLACK_TOKEN 
   email: 
     recipients:
       - johan-avila@outlook.com
 #      - ivanoseayo@gmail.com 
     on_success: always  #Cuando sea succes habra noticifacion
-    on_fail: always     #CUndo esto falla 
+    on_failure: always     #CUndo esto falla 
+notifications:
+  slack: slackexperime-gvk9848:rQSI5xX4b0WxUi4WuGGZDixt
+
+#### NOTTIFICACION SIMPLE
+
+# notifications:
+# slack: slackexperime-gvk9848:rQSI5xX4b0WxUi4WuGGZDixt
+
+#### NOTIFICACION A Varios Canales 
+
+# notifications:
+#   slack:
+#     rooms:
+#       - slackexperime-gvk9848:rQSI5xX4b0WxUi4WuGGZDixt#general
+#       - slackexperime-gvk9848:rQSI5xX4b0WxUi4WuGGZDixt#random
 
 deploy: 
   provider: pages
