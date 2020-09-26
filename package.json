@@ -4,8 +4,8 @@
   "description": "Proyecto para el curso de Jest",
   "main": "src/index.js",
   "scripts": {
-    "build": "webpack --mode production",
-    "start": "webpack-dev-server --open --mode development",
+    "build": "webpac --mode production",
+    "start": "webpac-dev-server --open --mode development",
     "format": "prettier --write '{*.js,src/**/*.{js,jsx}}'",
     "lint": "eslint src/"
   },
