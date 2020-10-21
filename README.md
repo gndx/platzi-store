@@ -1,8 +1,18 @@
-# Test con Jest y Enzyme en React
+# Testing en React
 
-Para ello vamos a usar el proyecto de [platzy-store](https://github.com/gndx/platzi-store) como base
+Contenido:
+
+* Configutación de Jest y Enzyme y ejemplos
+
+* Integración de Jest con un CI. Ver [integración con CI](/doc/integration-jest-CI.md)
+
+# Test con Jest y Enzyme
+
+Para ver este punto vamos a usar el proyecto de [platzy-store](https://github.com/gndx/platzi-store) como base. 
 
 ## Instalación
+
+Primero vamos a instalar Jest y Enzyme, así como un adaptador de enzyme para usar con la versión 16 de React.
 
 ```npm install jest enzyme enzyme-adapter-react-16 --save-dev```
 
