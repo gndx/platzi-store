@@ -68,4 +68,4 @@ Rellenamos:
 
 Y hacemos click en _Add_
 
-Ahora podemos hacer push a master con nuestro archivo de configuración yml
+Ahora podemos hacer push a una rama (que no es master) con nuestro archivo de configuración yml
