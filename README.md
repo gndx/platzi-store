@@ -6,7 +6,7 @@ Para ello vamos a usar el proyecto de [platzy-store](https://github.com/gndx/pla
 
 ```npm install jest enzyme enzyme-adapter-react-16 --save-dev```
 
-## Configuración
+## Configuración de jest
 
 Configuramos los scripts:
 
@@ -46,6 +46,21 @@ Y en el package json añadimos una configuración para que interprete bien este 
       "<rootDir>/src/__test__/setupTest.js"
     ]
   }
+```
+
+Alternativa: Podemos configurar jest en un archivo aparte para que esté más localizado y separado del resto del package, además podemos añadir ahí configuraciones adicionales como que incluya el coverage
+
+```js
+// jest.config.js
+
+module.exports = {
+  verbose: true,
+  collectCoverage: true,
+  setupFilesAfterEnv: ['<rootDir>/src/__test__/setupTest.js'],
+  moduleNameMapper: {
+    '\\.(styl|css)$': '<rootDir>/src/__mocks__/styleMock.js',
+  },
+};
 ```
 
 Si queremos trabajar con los módulos de ES6 podemos cambiar el archivo de babel _.babelrc_ 
@@ -371,20 +386,59 @@ describe('Reducer', () => {
 
 ```
 
-## Configuración de jest
+## Testear fetch
 
-Podemos configurar jest en un archivo aparte para que esté más localizado y separado del resto del package, además podemos añadir ahí configuraciones adicionales como que incluya el coverage
+Para usar mocks de fetch y poder testaearlos conjest, usaremos una herramienta llamada _jest fetch mock_
+
+```bash
+npm install jest-fetch-mock --save-dev
+```
+
+Y lo añadimos de forma global en nuestro archivo de configuración de los test:
 
 ```js
-// jest.config.js
+// src/__test__/setupTest.js
 
-module.exports = {
-  verbose: true,
-  collectCoverage: true,
-  setupFilesAfterEnv: ['<rootDir>/src/__test__/setupTest.js'],
-  moduleNameMapper: {
-    '\\.(styl|css)$': '<rootDir>/src/__mocks__/styleMock.js',
-  },
-};
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter() });
+global.fetch = require('jest-fetch-mock');
+```
+
+Ahora imaginemos que tenemos esta función que queremos testear que hace un fetch
+
+```js
+// src/utils/getData.js
+
+export default api => fetch(api)
+  .then(response => response.json())
+  .then((response => response))
+  .catch(error => error);
+```
+
+Los test usando el mock serían por ejemplo así:
+
+```js
+// src/__test__/utils/getData.test.js
+
+import getData from '../../utils/getData';
+
+describe('fetch API', () => {
+  beforeEach(() => {
+    fetch.resetMocks();
+  });
+
+  test('returns data after calling an api with fetch', () => {
+    fetch.mockResponseOnce(JSON.stringify({ data: '12345' }));
+
+    getData('https://fakeurl.com')
+      .then((response) => {
+        expect(response.data).toEqual('12345');
+      });
+
+    expect(fetch.mock.calls[0][0]).toEqual('https://fakeurl.com');
+  });
+});
 ```
 
