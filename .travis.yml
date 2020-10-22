@@ -9,6 +9,13 @@ git:
   depth: 3
 script:
   - yarn build
+notifications:
+  email:
+    reciepients:
+    - fel772@hotmail.com
+    - oscar@arepa.dev
+    on_success: always
+    on_failure: always
 deploy:
   provider: pages
   skip_cleanup: true
