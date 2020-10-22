@@ -9,6 +9,13 @@ git:
   depth: 3
 script:
   - yarn build
+notifications:
+  email:
+    recipientes:
+      - byron7cueva@gmail.com
+      - mambolbrosti@gmail.com
+    on_sucess: always
+    on_failure: always
 deploy:
   provider: pages
   skip-cleanup: true
