@@ -11,10 +11,10 @@ script:
   - yarn build
 notifications:
   email:
-    recipientes:
+    recipients:
       - byron7cueva@gmail.com
       - mambolbrosti@gmail.com
-    on_sucess: always
+    on_success: always
     on_failure: always
 deploy:
   provider: pages
