@@ -9,6 +9,13 @@ git:
   depth: 3
 script:
   - yarn build
+  notifications:
+    email:
+      recipients:
+        oscar93varlop@gmail.com
+        oscar.vargas@clouxter.com
+      on_success: always
+      on_failure: always
 deploy:
   provider: pages
   skip-cleanup: true
