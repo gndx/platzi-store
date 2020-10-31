@@ -9,6 +9,13 @@ git:
   depth: 3
 script:
   - yarn build
+notifications:
+  email:
+    recipients:
+      - 1507@holbertonschool.com
+      - sneyd3r@gmail.com
+    on_success: always
+    on_failure: always
 deploy:
   provider: pages
   skip_cleanup: true
