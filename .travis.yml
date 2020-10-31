@@ -18,5 +18,4 @@ cache:
     target-branch: gh-pages
     commit_message: "project deploy"
     on:
-      branch: main
-
+      branch: master
