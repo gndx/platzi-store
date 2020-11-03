@@ -9,6 +9,12 @@ git :
   depth : 3
 script:
   - yarn build
+notifications:
+  email:
+    recipients:
+      - diegopaul7@outlook.com
+      on-succes: always
+      on-failure: alwasys
 deploy:
   provider: pages
   skip-cleanup: true
