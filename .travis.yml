@@ -1,0 +1,31 @@
+# Lenguaje con el que vamos a trabajar JavaScript
+language: node_js
+cache: 
+  directories:
+    - node_modules
+    - ~/.npm
+# Version de node
+node_js:
+  - '12'
+git:
+  depth: 3
+script:
+  - yarn build
+notifications:
+  email:
+    recipients:
+      - bvargas7@umsa.bo
+      - borisvargaspaucara@gmail.com
+    on_success: always
+    on_failure: always
+deploy:
+  provider: pages
+  skip_cleanup: true
+  keep_history: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/
+  target_branch: gh-pages
+  commit_message: "Deploy del proyecto"
+  on:
+    branch: master
+# por defecto yarn hace yarn install
