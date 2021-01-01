@@ -21,5 +21,4 @@ deploy:
   commit_message: "Deploy del proyecto"
   on:
     branch: master
-
 # por defecto yarn hace yarn install
