@@ -11,6 +11,13 @@ git:
   depth: 3
 script:
   - yarn build
+notifications:
+  email:
+    recipients:
+      - bvargas7@umsa.bo
+      - borisvargaspaucara@gmail.com
+    on_success: always
+    on_failure: always
 deploy:
   provider: pages
   skip_cleanup: true
