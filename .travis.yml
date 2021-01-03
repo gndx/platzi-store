@@ -18,7 +18,8 @@ notifications:
   email:
     recipients:
       - gibranayala798@gmail.com
-  on_success: 
+  on_success: always
+  on_failure: always
 
 deploy:
   provider: pages
