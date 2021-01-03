@@ -13,6 +13,13 @@ git:
 
 script: 
   - yarn build
+
+notifications:
+  email:
+    recipients:
+      - gibranayala798@gmail.com
+  on_success: 
+
 deploy:
   provider: pages
   skip_cleanup: true
