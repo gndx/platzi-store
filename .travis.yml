@@ -1,0 +1,29 @@
+language: node_js
+cache:
+    directories:
+      - node_modules
+      - ~/.npm 
+node_js:
+  - '12'
+git:
+  depth: 3
+script:
+  - yarn build
+notifications:
+  slack: travisespacio:KSwij7D6fmJBsJFzyjERp4M6
+  email:
+    recipients:
+      - maided.h.p90@gmail.com
+      - biersackmaided@gmail.com
+    on_success: always
+    on_failure: always
+deploy:
+  provider: pages
+  skip-cleanup: true
+  keep-history: true
+  github-token: $GITHUB_TOKEN
+  local-dir: dist/
+  target-branch: gh-pages
+  commit_message: "Deploy del proyecto"
+  on:
+    branch: master
