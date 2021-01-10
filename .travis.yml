@@ -10,6 +10,7 @@ git:
 script:
   - yarn build
 notifications:
+  slack: travisespacio:KSwij7D6fmJBsJFzyjERp4M6
   email:
     recipients:
       - maided.h.p90@gmail.com
