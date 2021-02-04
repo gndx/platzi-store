@@ -12,6 +12,15 @@ git:
 script:
   - yarn build
 
+notifications:
+  email:
+    recipients:
+      - dmejia1204@gmail.com
+      - info@arcadecrstudio.com
+      - d.ruiz@peacsa.com
+    on_success: always
+    on_failure: always
+
 deploy:
   provider: pages
   skip_cleanup: true
