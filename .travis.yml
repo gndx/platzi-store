@@ -7,7 +7,6 @@ git:
 
 script:
   - yarn build
-
 deploy:
   provider: pages
   skip_cleanup: true
