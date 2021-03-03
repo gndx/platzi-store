@@ -18,7 +18,7 @@ git:
 # Permitir ramas especificas
 branches:
   only:
-  - main
+  - master
 
 # Ejecutamos los scripts
 script:
@@ -34,4 +34,4 @@ deploy:
   target_branch: gh-pages
   commit_message: "Deploy de proyecto"
   on
-    branch: main
+    branch: master
