@@ -16,9 +16,9 @@ git:
   depth: 3
 
 # Permitir ramas especificas
-branches:
-  only:
-  - master
+# branches:
+  #only:
+#  - master
 
 # Ejecutamos los scripts
 script:
