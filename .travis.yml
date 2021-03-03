@@ -1,0 +1,37 @@
+# Establecemos el lenguaje del proyecto
+lenguage: node_js
+
+# Cacheamos los directorios de las dependencias
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+
+# Establecemos la version de node
+node_js:
+  - '12'
+
+# Establecemos la profundidad
+git:
+  depth: 3
+
+# Permitir ramas especificas
+# branches:
+  #only:
+#  - master
+
+# Ejecutamos los scripts
+script:
+  - yarn bild
+
+# Mandamos a produccion
+deploy:
+  provider: pages
+  skip_cleanup: true
+  keep_history: true
+  github_token: $GITHUB_TOKEN 
+  local_dir: dist/
+  target_branch: gh-pages
+  commit_message: "Deploy de proyecto"
+  on
+    branch: master
