@@ -10,8 +10,17 @@ node_js:
 
 git:
   depth: 3
+
 script:
   - yarn build
+
+notifications:
+  email:
+    reciepients:
+      - juan.gaviria@kommit.cos
+    on_success: always
+    on_failure: always
+
 deploy:
   provider: pages
   skip_cleanup: true
