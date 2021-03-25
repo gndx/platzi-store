@@ -1,10 +1,10 @@
 # platzi-store
 Curso de Pruebas unitarias con Jest
 
-Clase: 4
+Clase: 5
 
-- Agregar context
-- Crear context
-- Insertar context en app
-- Actualizar Product
-- Retar a eliminar redux y cambiarlo a context
+- Agregar alias a webcpack dev
+- Agregar alias a webpack 
+- Actualizar
+- Reto actualizar todo
+- Probar
