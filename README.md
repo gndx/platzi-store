@@ -1,13 +1,10 @@
 # platzi-store
 Curso de Pruebas unitarias con Jest
 
-Clase: 3
+Clase: 4
 
-- Crear useInitialState
-- Integrarlo
-- Crear logica en App
-- Probar
-- Revisar asyn await
-npm install @babel/plugin-transform-runtime -D
-- actualizar babelrc
-
+- Agregar context
+- Crear context
+- Insertar context en app
+- Actualizar Product
+- Retar a eliminar redux y cambiarlo a context
