@@ -1,16 +1,10 @@
 # platzi-store
 Curso de Pruebas unitarias con Jest
 
-Clase: 6
+Clase: 7
 
-- Agregar una imagen
-- Agregar asset manager
-https://webpack.js.org/guides/asset-management/#root
-- Agregar configuracion
-- probar
-
-- instalar
- npm install image-minimizer-webpack-plugin --save-dev
-
-- agregar configuracion a webpack.config.js
-- probar
+- npm install typescript ts-loader @types/react @types/react-dom @types/webpack
+- Agregar tscondig.json
+- Agregar loader
+- crear componente
+- Probar
