@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import AppContext from '../context/AppContext';
-import Product from './Product';
-import '../styles/components/Products.styl';
+import AppContext from '@context/AppContext';
+import Product from '@components/Product';
+import '@styles/components/Products.styl';
 
 
 const Products = () => {

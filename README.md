@@ -1,6 +1,6 @@
 # platzi-store
 Curso de Pruebas unitarias con Jest
 
-Clase: 8
+Clase: 9
 
-https://github.com/gaearon/react-hot-loader
+webpack.config.js
