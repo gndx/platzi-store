@@ -1,0 +1,29 @@
+languege: node_js
+cache:
+  directories:
+    - node_modules 
+    - ~/.npm 
+node_js:
+  - '12'
+git:
+  depth: 3
+script:
+  - yarn build
+notifications:
+  slack:
+    secure: "bhVjYZ7CE+Qih1I+rn0Htv13iEUzN28wMhQoElHXcE5M2stsJyeWmKN+0o7osFF/X3XdyUFPaVfskEWTR1PWBcj8UEE4hfrS1VZ4amFb6SLKs0JUMsrvgYJA7GlRbH9uLjHNT9EtxZRyCgKIaOoLBEIjDAFi8vN2MbhgHgzlDuv16i6/Gt7IwCSLHKSkQNykoxDgoW5fKU7lr9CHbHDdDFruU9DZbAK8O8h5DqBUgSQE6mYjE/GCsndo1KwbEKZi//2f6xV1OcNuCmgf8CUUz3mtxST8wUcpWgy+as/yxqhMHhXR7+q5UcjvK35D8jBTDUs0pA4la2Rrx5U7Yx7Lz+4+bd3YYgJObCKbyUDQGzXbX39ueAI5g8+TY4f1o95v5d1t3HVRNw7nH7hDIkA8k7ke4dqCI4tv30knPSi1Tt+dcrWM1ZuNRuKeL/siMflRwcFLKfZmRaP9K/jnHobd4XGulFMcxmLQQoe+2TPL6+p+a4TkWmh5K5ZIneaNl6XbXz2xSjBKgGouGvsS6J693wp/jkBRGfW481H86pGCrMhGgClrqtmiPhmWNY6YbK1hWQpQVaFsX46Df8Y5TG3eViH8ssP9Cv5Mwz+XClZePhF+RQgtRopn7SZq8cM+Ef1mpp25A7XnGs9aVxSqZEvx8N+vB9uoS54Ht0WMdoF1WXw="
+  email:
+    reciepients:
+      - luis@agrodev.cl
+    on_success: always
+    on_failure: always
+deploy:
+  provider: pages
+  skip_cleanup: true
+  keep_history: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/
+  target_branch: gh-page
+  commit_message: 'Deploy del proyecto'
+  on:  
+    branch: master
