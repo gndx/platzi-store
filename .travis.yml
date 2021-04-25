@@ -9,6 +9,14 @@ git:
   depth: 3
 script: 
   - yarn build
+
+notifications:
+  email:
+    recipients:
+      - aherediamx10@gmail.com
+      - spawnmx10@gmail.com
+    on_success: always
+    on_failure: always  
 deploy: 
   provider: pages
   skip_cleanup: true
