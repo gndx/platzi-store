@@ -67,6 +67,12 @@
   "homepage": "https://github.com/gndx/platzi-store/#readme",
   "type": "module",
   "jest": {
+    "coverageReporters": [
+      "lcov",
+      "json-summary",
+      "text",
+      "text-summary"
+    ],
     "setupFilesAfterEnv": [
       "<rootDir>/src/setupTests.js"
     ],
