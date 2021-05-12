@@ -17,6 +17,6 @@ deploy:
   local-dir: dist/
   target-branch: gh-pages
   commit_message: "Deploy del proyecto"
-  on
+  on:
     branch: master
 
