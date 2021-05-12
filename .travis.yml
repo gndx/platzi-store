@@ -1,0 +1,28 @@
+languaje: node_js
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+node_js:
+  - '12'
+git:
+  depth: 3
+script:
+  - yarn build
+notifications:
+  email:
+    recipients:
+      - reatiguijeferson@gmail.com
+    on_success: always
+    on_failure: always
+deploy:
+  provider: pages
+  skip-cleanup: true
+  keep-history: true
+  github-token: $GITHUB_TOKEN
+  local-dir: dist/
+  target-branch: gh-pages
+  commit_message: "Deploy del proyecto"
+  on:
+    branch: master
+
