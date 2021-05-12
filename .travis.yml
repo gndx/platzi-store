@@ -1,4 +1,4 @@
-languajes: node_js
+languaje: node_js
 cache:
   directories:
     - node_modules
