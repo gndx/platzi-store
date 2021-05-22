@@ -13,7 +13,7 @@ deploy:
   provider: pages
   skit-cleanup: true
   keep-history: true
-  github-token: $GITHUB-TOKEN
+  github-token: $GITHUB_TOKEN
   local_dir: dist/
   target-branch: gh-pages
   commit_message: "Deploy del proyecto"
