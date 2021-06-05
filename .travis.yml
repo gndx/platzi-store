@@ -9,6 +9,13 @@ git:
   depth:  3
 script:
   - yarn build
+notifications:
+  email:
+    recipients:
+      - mario.rodzp@gmail.com
+      - mario_rodz@outlook.com
+    on_success: always
+    on_failure: always
 deploy:
   provider: pages
   skip-cleanup: true
