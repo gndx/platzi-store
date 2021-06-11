@@ -14,7 +14,12 @@ git:
 
 script:
   - yarn build
-
+notifications:
+  email:
+    recipients:
+      - seba.c.garay@gmail.com
+    on_successs: always
+    on_failure: always
 deploy:
   provider: pages
   skip-cleanup: true
@@ -25,4 +30,4 @@ deploy:
   commit_message: "Deploy del Proyecto"
   on:
     branch: master
-    
+
