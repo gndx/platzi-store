@@ -9,10 +9,16 @@ git:
   depth: 3
 script:
   - yarn build
+notifications:
+  email:
+    recipients:
+      - ernestomm99@hotmail.com
+    on_success: always
+    on_failure: always
 deploy:
   provider: pages
   skip_cleanup: true
   keep_history: true
   github_token: $GITHUB_TOKEN
   local_dir: dist/
-  target_branch: gh-pages
+  target_branch: gh-pages #message deleted cuz it give problems on the deploy
