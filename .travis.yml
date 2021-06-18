@@ -10,7 +10,14 @@ git:
   depth: 3
 script:
   - yarn build
-deploy:
+notifications:
+  email:
+    recipients:
+      - yeicostar.88@gmail.com
+      - codingwilkins@gmail.com
+    on_success: always
+    on_failure: always
+  deploy:
   provider: pages
   skip_cleanup: true
   keep_history: true
