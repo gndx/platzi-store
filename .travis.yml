@@ -16,6 +16,6 @@ deploy:
   github_token: $GITHUB_TOKEN
   local_dir: dist/
   target_branch: gh-pages
-  commit_massage: "Get deployado '3'"
+  commit_massage: "Get deployado"
   on
     branch: master
