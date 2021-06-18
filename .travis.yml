@@ -18,4 +18,4 @@ deploy:
   target_branch: gh-pages
   commit_massage: "Get deployado"
   on
-    branch: master
+    branch: gh-pages
