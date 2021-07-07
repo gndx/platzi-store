@@ -1,15 +1,14 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import actions from '../actions';
-import '../styles/components/Products.styl';
-import Product from './Product';
+import React, { useContext } from 'react'
+import { ShopContext } from '../context/GlobalState'
+import '../styles/components/Products.styl'
+import Product from './Product'
 
-const Products = (props) => {
-  const { products } = props;
+const Products = () => {
+  const { products, addToCart } = useContext(ShopContext)
 
   const handleAddToCart = product => () => {
-    props.addToCart(product);
-  };
+    addToCart(product) // FIXME: ADD addToCart to Context
+  }
 
   return (
     <div className="Products">
@@ -23,17 +22,7 @@ const Products = (props) => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-const mapStateToProps = (state) => {
-  return {
-    products: state.products,
-  };
-};
-
-const mapDispatchToProps = {
-  addToCart: actions.addToCart,
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Products);
+export default Products
