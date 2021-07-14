@@ -10,14 +10,14 @@ node_js:
 
 git:
   depth: 3
-  
+
 script:
   - yarn build
 notifications:
   email:
     recipients:
-      - conedie@gmail.com
-      - diego.beltran.g@misena.edu.co
+      - ortegapedro901@gmail.com
+      - pedro.ortega@tfja.edu.com
     on_success: always
     on_failure: always
 deploy:
