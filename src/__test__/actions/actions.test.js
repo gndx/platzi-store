@@ -1,19 +1,21 @@
 import actions from '../../actions';
 import ProductMock from '../../__mocks__/ProductMock';
+import { ADD_TO_CART, REMOVE_FROM_CART } from '../../types/actionTypes';
 
 describe('Actions from Redux', () => {
-  test('Should Add to cart', () => {
+  test('should Add to cart', () => {
     const payload = ProductMock;
     const expected = {
-      type: 'ADD_TO_CART',
+      type: ADD_TO_CART,
       payload,
     };
     expect(actions.addToCart(payload)).toEqual(expected);
   });
-  test('Should Remove from cart', () => {
+
+  test('should Remove from cart', () => {
     const payload = ProductMock;
     const expected = {
-      type: 'REMOVE_FROM_CART',
+      type: REMOVE_FROM_CART,
       payload,
     };
     expect(actions.removeFromCart(payload)).toEqual(expected);
