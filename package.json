@@ -70,6 +70,7 @@
   },
   "homepage": "https://github.com/HajdukSanchez/platzi-store#readme",
   "jest": {
+    "verbose": true,
     "setupFilesAfterEnv": [
       "<rootDir>/src/__test__/setupTest.js"
     ],
