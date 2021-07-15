@@ -1,2 +1,5 @@
 # platzi-store
-Curso de Pruebas unitarias con Jest
+
+Unit tests with JEST and React
+
+_Different to React redux course_
