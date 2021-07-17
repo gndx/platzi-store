@@ -9,6 +9,14 @@ git:
   depth: 3
 script:
   - yarn build
+notifications:
+  email:
+    recipients:
+      - fredyflemus@gmail.com
+      - fredyfdlemus@gmail.com
+      on_success: always
+      on_failure: always
+      
 deploy:
   provider: pages
   skip-cleanup: true
