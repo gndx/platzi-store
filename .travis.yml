@@ -18,6 +18,14 @@ git:
 script: 
   - yarn build 
 
+#trabajando sobre las notificaciones manda emails a esos mails cuando es exitoso y cuando falla
+notifications: 
+  email:
+    recipients:
+    - alejandroverah@gmail.com
+    on_success: always
+    on_failure: always
+
 
 deploy: 
   provider: pages
