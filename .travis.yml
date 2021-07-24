@@ -1,0 +1,37 @@
+language: node_js
+
+#archivos que viviran en cache
+cache:
+  directories:
+    - node_modules
+    - ~/.npm 
+
+#version de node
+node_js: 
+  - '12'
+
+#profundida a la que va a leer mi repositorio
+git: 
+  depth: 3
+
+#estandar que tiene travis para trabajar
+script: 
+  - yarn build 
+
+
+deploy: 
+  provider: pages
+  #se asegurará de que después de crear la carpeta que está intentando implementar, no se eliminará antes de que se implemente.
+  skip_cleanup: true
+  #asegurará que no se realice un empuje forzado.
+  keep_history: true
+  #permite conectarnos con nuestro repositorio y que travis desde sus servidores ueda acceder a nuestro repositorio
+  #garantiza que la tarea de implementación tenga el privilegio suficiente para enviarla a las páginas de Github
+  github_token: $GITHUB_TOKEN 
+  #Establece el directorio resultante de la compilacion
+  local_dir: dist/
+  #la rama que nos dicta la documentacion de github pages que va a detectar como una rama que va a publicar nuestro sitio
+  target_branch: gh-pages
+  commit_message: "Deploy del proyecto"
+  on: 
+    branch: master
