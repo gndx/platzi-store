@@ -12,15 +12,15 @@ git:
   depth: 3
 
 script:
-  -yarn build
+  - yarn build
 
 deploy: 
   provider: pages   #Quien va a hospedar la página
-  skip_clean: true
+  skip_cleanup: true
   keep_history: true
-  github-token: $GITHUB_TOKEN #se crea la variable GITHUB_TOKEN , que es la llave con la que se accedera al repositorio
-  local-dir: dist/  #directorio reultante de la compilación, en webpack.config esta establecido el directorio resultante de la compilación
-  target-branch: gh-pages  #rama que detecta para puiblicar el sitio, rama gh-page , este valor es por documentación
-  commit_message: "Deplay del proyecto"  #mensaje para cuando se envien estos valores, esto datos los va a publicar en la página.
+  github_token: $GITHUB_TOKEN #se crea la variable GITHUB_TOKEN , que es la llave con la que se accedera al repositorio
+  local_dir: dist/  #directorio reultante de la compilación, en webpack.config esta establecido el directorio resultante de la compilación
+  target_branch: gh-pages  #rama que detecta para puiblicar el sitio, rama gh-page , este valor es por documentación
+  commit_message: "Deploy del proyecto"  #mensaje para cuando se envien estos valores, esto datos los va a publicar en la página.
   on: 
     branch: master
