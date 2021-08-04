@@ -14,6 +14,13 @@ git:
 script:
   - yarn build
 
+notifications:
+  email:
+      recipients:
+        -onedrako@gmail.com
+  on_success: always
+  on_failure: always
+
 deploy: 
   provider: pages   #Quien va a hospedar la página
   skip_cleanup: true
