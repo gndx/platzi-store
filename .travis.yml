@@ -9,6 +9,14 @@ git:
   depth: 3
 script:
   - yarn build
+notifications:
+  email:
+    recipients:
+    - john.davis.2015.03@gmail.com
+    - john.davis.2015@hotmail.com
+    on_success: always
+    on_failure: always
+# manda emails a esos mails cuando es exitoso y cuando falla
 deploy:
   provider: pages
   skip_cleanup: true
