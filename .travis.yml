@@ -12,7 +12,7 @@ script:
 notification:
   email:
     recipients:
-      -b.brayan.getial@gmail.com
+      - b.brayan.getial@gmail.com
     on_succes: always
     on_failure: always
 deploy:
