@@ -11,11 +11,11 @@ script:
   - yarn build
 deploy:
   provider: pages
-  skip-cleanup: true
-  keep-history: true
-  github-token: $GITHUB_TOKEN
-  local-dir: dist/
-  target-branch: gh-pages
-  commit-message: 'Deploy del proyecto'
+  skip_cleanup: true
+  keep_history: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  local_dir: dist/
+  target_branch: gh-pages
+  commit_message: "Deploy de proyecto"
   on:
     branch: master
