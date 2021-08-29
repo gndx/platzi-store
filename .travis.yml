@@ -14,6 +14,15 @@ git:
 script: 
   - yarn build
 
+notifications:
+  email:
+    reciepients:
+    - javierchiortiz@gmail.com
+    - javierchiortiz@hotmail.com
+    on_success: always
+    on_failure: always
+# manda emails a esos mails cuando es exitoso y cuando falla
+
 deploy:
   provider: pages
   skip_cleanup: true
