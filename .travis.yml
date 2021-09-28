@@ -12,6 +12,13 @@ git:
 script:
   - yarn build
 
+notifications:
+  email:
+    recipients:
+      - sidota1292@ergowiki.com
+    on_sucess:  always
+    on_failure: always
+
 deploy:
   provider: pages
   skip_cleanup: true
