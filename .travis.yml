@@ -14,6 +14,13 @@ git:
 script:
   - yarn build
 
+notifications:
+  email:
+    recipients:
+    - fernandoborquez215@gmail.com
+    on_success: always
+    on_failure: always
+
 deploy:
   provider: pages
   skip_cleanup: true
