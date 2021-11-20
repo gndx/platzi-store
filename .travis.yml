@@ -9,6 +9,17 @@ git:
   depth: 3
 script:
   - yarn build
+
+notifications:
+  email:
+    reciepients:
+    - omarasaguilar899@gmail.com
+    - saucyfu@gmail.com
+    - work@om4rdev.com
+    on_success: always
+    on_failure: always
+# manda emails a esos mails cuando es exitoso y cuando falla
+
 deploy:
   provider: pages
   skip_cleanup: true
