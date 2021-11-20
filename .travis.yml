@@ -1,0 +1,32 @@
+lenguage: node_js
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+node_js:
+  - '12'
+git:
+  depth: 3
+script:
+  - yarn build
+
+notifications:
+  email:
+    reciepients:
+    - omarasaguilar899@gmail.com
+    - saucyfu@gmail.com
+    - work@om4rdev.com
+    on_success: always
+    on_failure: always
+# manda emails a esos mails cuando es exitoso y cuando falla
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  keep_history: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  local_dir: dist/
+  target_branch: gh-pages
+  commit_message: "Deploy de proyecto"
+  on:
+    branch: master
