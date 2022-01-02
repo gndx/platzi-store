@@ -11,16 +11,22 @@ node_js:
 git: # número de versiones (git) a guardar
   deth: 3
 
-script: 
+script:  #script a ejecutar
   - yarn build
 
+#github pages
+# configuración del deploy:
 deploy: 
-  provider: pages # github pages
+  provider: pages
   skip-cleanup: true
   keep-history: true
-  github-token: $GITHUB_TOKEN #  # Set in the settings page of your repository, as a secure variable
+  github-token: $GITHUB_TOKEN  # creación de un token para la conexión
+  # entre Travis y GitHub:
+  # directorio resultante de la compilación:
+  # xej: /bodndel  /public ...etc
   local-dir: dist/ # es el output de webpack.config.js
+  # rama de publicación (sitio) de GitHub:
   target-branch: gh-pages
   commit_message: "Deploy del proyecto" # es el mensaje que se enviara con estos valres
   on:
-    branch: main
+    branch: master
