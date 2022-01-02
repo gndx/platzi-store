@@ -1,0 +1,26 @@
+language: node_js
+cache: 
+  directories:
+    # información ya configurada para el proyecto
+    - node_modules
+    - ~/.npm
+
+node_js:
+  - "12" # voy a trabajar en la v12 
+
+git: # número de versiones (git) a guardar
+  deth: 3
+
+script: 
+  - yarn build
+
+deploy: 
+  provider: pages # github pages
+  skip-cleanup: true
+  keep-history: true
+  github-token: $GITHUB_TOKEN #  # Set in the settings page of your repository, as a secure variable
+  local-dir: dist/ # es el output de webpack.config.js
+  target-branch: gh-pages
+  commit_message: "Deploy del proyecto" # es el mensaje que se enviara con estos valres
+  on:
+    branch: main
