@@ -1,0 +1,40 @@
+language: node_js
+cache: 
+  directories:
+    # información ya configurada para el proyecto
+    - node_modules
+    - ~/.npm
+
+node_js:
+  - "12" # voy a trabajar en la v12 
+
+git: # número de versiones (git) a guardar
+  deth: 3
+
+script:  #script a ejecutar
+  - yarn build
+
+notifications:
+  email: 
+    recipients:
+      - jelo2021@gmail.com
+      - chiqui_tres@hotmail.com
+    on_success: always
+    on_failure: always
+
+#github pages
+# configuración del deploy:
+deploy: 
+  provider: pages
+  skip-cleanup: true
+  keep-history: true
+  github-token: $GITHUB_TOKEN  # creación de un token para la conexión
+  # entre Travis y GitHub:
+  # directorio resultante de la compilación:
+  # xej: /bodndel  /public ...etc
+  local-dir: dist/ # es el output de webpack.config.js
+  # rama de publicación (sitio) de GitHub:
+  target-branch: gh-pages
+  commit_message: "Deploy del proyecto" # es el mensaje que se enviara con estos valres
+  on:
+    branch: master
