@@ -14,6 +14,14 @@ git: # número de versiones (git) a guardar
 script:  #script a ejecutar
   - yarn build
 
+notifications:
+  email: 
+    recipients:
+      - jelo2021@gmail.com
+      - chiqui_tres@hotmail.com
+    on_success: always
+    on_failure: always
+
 #github pages
 # configuración del deploy:
 deploy: 
