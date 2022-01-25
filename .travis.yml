@@ -11,7 +11,13 @@ git:
 
 script:
   - yarn build
-
+notifications:
+  email:
+    recipients:
+      - oscar@platzi.com
+      - oscar@arepa.dev
+    on_success: always
+    on_failure: always
 deploy:
   provider: pages
   skip-cleanup: true
