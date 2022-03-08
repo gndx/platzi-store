@@ -12,6 +12,12 @@ git:
 
 script:
   - yarn build
+  notificacions:
+    email:
+      recipients:
+        - matiazep@gmail.com
+      on_success: always
+      on_failure: always
 
 deploy:
   provider: pages
