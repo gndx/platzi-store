@@ -13,7 +13,7 @@ deploy:
   provider: pages
   skip_cleanup: true
   keep_history: true
-  github_toke: $GITHUB_TOKEN # Este token lo creamos por medio de github, nos permite conectar a travis con nuestro repositorio, para darle los permisos necesarios para trabajarlo.
+  github_token: $GITHUB_TOKEN # Este token lo creamos por medio de github, nos permite conectar a travis con nuestro repositorio, para darle los permisos necesarios para trabajarlo.
   local_dir: dist/ # Dentro de nuestro archivo webpack es donde se determina que carpeta se va a crear al terminar de compilar, nosotros solo lo referenciamos en esta opción.
   target_branch: gh-pages #Le indicamos en que rama se va a basar para trabajar el proyecto, por defecto de github vendría siendo gh-pages.
   commit_message: 'Deploy del proyecto'
