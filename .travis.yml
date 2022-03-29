@@ -1,0 +1,29 @@
+language: node_js
+cache:
+  directories: #Indicamos que directorios debe tener almacenados en caché para que sea mas rápida la ejecución del proyecto.
+    - node_modules
+    - ~/.npm
+node_js:
+  - '12'
+git: #Numero de versiones git que guardará para tener un historial del proyecto.
+  depth: 3
+script:
+  - yarn build # Por defecto travis trabaja con yarn y no con npm, hay algunas diferencias pero no deberia haber problema con ejecutar los scripts que tengamos configurados en el proyecto hecho con npm.
+notifications: #Podemos activar notificaciones a varios correos, ya sean por ejemplo al dev ops leader, backend lead, frontend lead, etc.
+  email:
+    recipients:
+      - danielfc_26@hotmail.com
+      - famfloresmtz.15@outlook.com
+      on_success: always # Se manda correo cuando se deploye bien.
+      on_failure: always # Y cuando no, también. 
+deploy:
+  provider: pages
+  skip_cleanup: true
+  keep_history: true
+  github_token: $GITHUB_TOKEN # Este token lo creamos por medio de github, nos permite conectar a travis con nuestro repositorio, para darle los permisos necesarios para trabajarlo.
+  local_dir: dist/ # Dentro de nuestro archivo webpack es donde se determina que carpeta se va a crear al terminar de compilar, nosotros solo lo referenciamos en esta opción.
+  target_branch: gh-pages #Le indicamos en que rama se va a basar para trabajar el proyecto, por defecto de github vendría siendo gh-pages.
+  commit_message: 'Deploy del proyecto'
+  on: #Indicamos sobre que rama se va a trabajar, en este caso master, entonces cada vez que master tenga un cambio en github, se ejecutará todo el script que acabamos de configurar.
+    branch: master
+# En este caso el comando install: no es necesaria, ya que travis ejecutará la instalación de las dependencias necesarias que se encuentran en nuestro package.json
