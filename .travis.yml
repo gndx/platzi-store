@@ -1,27 +1,21 @@
-language: node_js
-cache: # información ya configurada para el proyecto
-        directories:
-                - node_modules
-                - ~/.npm
-node_js: #version
-        - '12'
-git: # número de versiones (git) a guardar
-        depth: 3
-script: #script a ejecutar
-        - yarn build
+lenguage: node_js
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+node_js:
+  - '12'
+git:
+  depth: 3
+script:
+  - yarn build
 deploy:
-        provider: pages #github pages
-# configuración del deploy:
-        skip_cleanup: true
-        keep_history: true
-# creación de un token para la conexión
-# entre Travis y GitHub:
-        github_token: $GITHUB_TOKEN
-# directorio resultante de la compilación:
-# xej: /bodndel  /public ...etc
-        local_dir: dist/
-# rama de publicación (sitio) de GitHub:
-        tarjet_branch: gh-pages
-        commit_message: "Deploy del proyecto travis"
+  provider: pages
+  skip_cleanup: true
+  keep_history: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/
+  target_branch: gh-page
+  commit_message: 'Deploy del proyecto'
   on:
     branch: master
