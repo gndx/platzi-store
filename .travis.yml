@@ -13,6 +13,14 @@ git:
 script:
   - yarn build
 
+notifications:
+  email: 
+    recipients:
+      - eormeno12@gmail.com
+      - ernesto.ormeno@utec.edu.pe
+    on_success: always
+    on_failure: always
+
 deploy:
   provider: pages
   skip-cleanup: true
