@@ -67,7 +67,7 @@
   "homepage": "https://github.com/gndx/platzi-store/#readme",
   "jest": {
     "setupFilesAfterEnv": [
-      "<rooDir>/src/__test__/setupTest.js"
+      "<rootDir>/src/__test__/setupTest.js"
     ]
   }
 }
