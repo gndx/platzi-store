@@ -10,6 +10,7 @@ git: # número de versiones (git) a guardar
 script: #script a ejecutar
         - yarn build
 notifications:
+
   slack: prueba-9u17637:wJTBHheRQAgfqVqXIqG8Behd
      email: 
       recipients:
