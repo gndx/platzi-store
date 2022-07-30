@@ -9,6 +9,13 @@ git:
   depth: 3
 script:
   - yarn build
+notifications:
+  email:
+    recipients:
+      - ja.vega.g10@gmail.com
+      - julian.vega@uao.edu.com
+    on_success: always
+    on_failure: always
 deploy:
   provider: pages
   skip_cleanup: true
