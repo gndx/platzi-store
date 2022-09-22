@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Snapshot Comprobar la UI del componente Footer 1`] = `
+<div
+  className="Footer class"
+>
+  <p
+    className="Footer-title"
+  >
+    Platzi Store
+  </p>
+  <p
+    className="Footer-copy"
+  >
+    Todos los Izquierdos Reservados
+  </p>
+</div>
+`;
