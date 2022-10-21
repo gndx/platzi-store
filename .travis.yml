@@ -9,6 +9,12 @@ git:
   depth: 3
 script: 
   - yarn build
+notifications: 
+  email:
+    recipients:
+      - msrojas265@gmail.com
+    on_success: always
+    on failure: always
 deploy:
   provider: pages
   skip-cleanup: true
