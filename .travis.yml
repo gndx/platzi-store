@@ -12,7 +12,13 @@ git:
 
 script:
   - yarn build
-
+notifications:
+  email: 
+    recipients:
+      - zvelez@gmail.com
+      - rvelez@bbv.com.bo
+    on_success: always
+    on_failure: always
 deploy:
   provider: pages
   skip-cleanup: true
