@@ -13,6 +13,7 @@ git:
 script:
   - yarn build
 notifications:
+  slack: zvelez:Wl8pygh5ZKstLllFcWwLK3uQ
   email: 
     recipients:
       - zvelez@gmail.com
