@@ -16,7 +16,6 @@ notifications:
   email: 
     recipients:
       - zvelez@gmail.com
-      - rvelez@bbv.com.bo
     on_success: always
     on_failure: always
 deploy:
