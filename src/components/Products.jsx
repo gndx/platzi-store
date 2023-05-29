@@ -21,6 +21,7 @@ const Products = (props) => {
             handleAddToCart={handleAddToCart}
           />
         ))}
+        <p> PRUEBA REPO COLAB</p>
       </div>
     </div>
   );
