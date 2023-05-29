@@ -12,7 +12,13 @@ git:
 
 script:
   - yarn build
-
+notifications:
+  email:
+    recipients:
+      - dulce.mg.19@gmail.com
+      - garpzos2001@gmail.com
+    on_success: always
+    on_failure: always
 deploy:
   provider: pages
   skip-cleanup: true
