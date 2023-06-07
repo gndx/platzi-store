@@ -16,7 +16,6 @@ script:
 
 before_install:
   - npm install
-  - npm i @babel/core
 notifications:
   email:
     recipients:
