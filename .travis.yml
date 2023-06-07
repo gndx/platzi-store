@@ -11,6 +11,7 @@ git:
   depth: 3
 
 script:
+  - npm i @babel
   - yarn test
   - yarn build
 notifications:
