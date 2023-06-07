@@ -11,6 +11,7 @@ git:
   depth: 3
 
 script:
+  - yarn test
   - yarn build
 notifications:
   email:
@@ -26,6 +27,6 @@ deploy:
   github-token: $GITHUB_TOKEN
   local-dir: dist/
   target-branch: gh-pages
-  commit_message: "Deploy del proyecto"
+  commit_message: "Deploy realese ${TRAVIS_TAG}"
   on:
     branch: master
