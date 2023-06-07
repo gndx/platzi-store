@@ -11,9 +11,11 @@ git:
   depth: 3
 
 script:
-  - npm i @babel
   - yarn test
   - yarn build
+
+before_install:
+  - npm i @babel/core
 notifications:
   email:
     recipients:
