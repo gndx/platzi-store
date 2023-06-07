@@ -11,8 +11,10 @@ git:
   depth: 3
 
 script:
-  - yarn test
-  - yarn build
+  - npm install -g codecov
+  - npm test && codecov
+  - CI=false npm run build
+  - npm run docs
 
 before_install:
   - npm install
